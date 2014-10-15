@@ -3,6 +3,8 @@ class tilde::webserver ($hostname) {
 
   $www_root = "/var/www/${hostname}"
 
+  $userlist = generate("/usr/local/bin/generate_userlist")
+
   file { ['/var/www', $www_root]:
     ensure => directory,
   }
@@ -10,7 +12,8 @@ class tilde::webserver ($hostname) {
   file { 'mainpage':
     ensure => file,
     path => "${www_root}/index.html",
-    source => "puppet:///modules/${module_name}/main_index.html",
+    content => template("${module_name}/main_index.erb"),
+    #source => "puppet:///modules/${module_name}/main_index.html",
   }
 
   nginx::resource::vhost { $hostname:

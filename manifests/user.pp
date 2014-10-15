@@ -39,5 +39,11 @@ define tilde::user ($pubkey_type = 'ssh-rsa', $pubkey) {
     replace => false,
   }
 
+  # custom to tilde.town
 
+  exec { "${username} welcome present":
+    command => "/usr/local/bin/welcome_present ${username}",
+    creates => "/home/${username}/welcome_${username}",
+    require => User[$username],
+  }
 }
