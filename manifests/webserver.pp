@@ -4,6 +4,7 @@ class tilde::webserver ($hostname) {
   $www_root = "/var/www/${hostname}"
 
   $userlist = generate("/usr/local/bin/generate_userlist")
+  $active_user_count = generate("/usr/local/bin/active_users")
 
   file { ['/var/www', $www_root]:
     ensure => directory,

@@ -10,6 +10,7 @@
     </head>
     <body>
         <h1>tilde.town is a small unix server built for sharing</h1>
+<marquee><strong>~*~*~* <%= @active_user_count %> townies active right now *~*~*~</strong></marquee>
 <table>
 <tr>
   <td style="width:25%">
@@ -17,6 +18,7 @@
 <%= @userlist %>
 </td>
   <td>
+  <h2>about tilde.town</h2>
         <p>tilde.town is a clone of <a href="http://tilde.club">tilde.club</a>. It is still new and has plenty of space for new users. tilde.town is completely free to use.</p>
 
         <h2>get an account</h2>
@@ -29,15 +31,58 @@ username</strong> and a link to a paste of your <strong>ssh pub key</strong>
         <p>you can also mail me at <a href="mailto:nks@lambdaphil.es">nks@lambdaphil.es</a>. I tend to notice things on Twitter faster, though.</p>
 
         <h2>guidelines</h2>
-        <p>this place is run exactly like tilde.club. You are free to refer to their FAQ/guidelines. We adhere to the same principles. In other words, no drama. No cruely. No trolls. I (~vilmibm) wield autocratric power and have no issues booting people who makes things unpleasant for others.</p>
+        <p>this place is run exactly like tilde.club. You are free to refer to their FAQ/guidelines. We adhere to the same principles. In other words, no drama. No cruelty. No trolls. I (<a href="http://tilde.town/~vilmibm">~vilmibm</a>) wield autocratric power and have no issues booting people who make things unpleasant for others.</p>
 
         <h2>server</h2>
         <p>this runs on an ec2 micro using ubuntu 14.04. I am working on a <a href="https://github.com/nathanielksmith/puppet-tilde">puppet module</a> that allows anyone to easily provision a tilde-style server.</p>
 </td>
+<td>
+<h2>tilde town news</h2>
+<h3>60 users</h3>
+<p><sub><em>Sat Oct 25 19:37:47 UTC 2014</em></sub></em>
+<p>tilde.town is up to 60 users. This is lovely! It is also only a tenth of our
+planned total user capacity, so if you are interested in a tilde* account we'd
+love to have you. You can even submit a user request with a fancy form now!</p>
+
+<p>
+<strong><a href="http://goo.gl/forms/8IvQFTDjlo">submit a user account request!</a></strong>
+</p>
+</p>
+
+<h3>Change of IP, warnings when you ssh</h3>
+<p><sub><em>Sun Oct 19 03:28:59 UTC 2014</em></sub></p>
+<p>
+  In the interest of making sure we don't suddenly disappear from the Internet
+as a result of a dynamic IP change on AWS I switched to using an Elastic
+IP (amusingly, "elastic" IPs are static).
+</p>
+
+<p>
+The upside is that we now have a static IP (also it's free) (woo).
+</p>
+
+<p>
+The downside is that when you try to SSH into tilde.town, now, you'll get an
+error about "something nasty" and there will be many @ characters. You'll want
+to edit your .ssh/known_hosts file and remove the entry for tilde.town (your
+error message should have a cute copy-pasta-able one-liner for doing this for
+you).
+</p>
+
+<p>
+Go ahead and do that, and then log in With Confidence. Hopefully this won't happen again.
+</p>
+
+<p>
+I'll close by mentioning the imminent arrival of many new tildeverse members. We (the tildeverse operators) are just about ready to accept the signups currently languishing in a waitlist. This means lots of new users, which is lovely, but may mean some growing pains while I adapt our server to the new user load in the most cost-effective way.
+</p>
+
+</td>
 </tr>
 </table>
-
-        <h2>a sestina</h2>
+<table>
+<tr>
+<td>
         <pre>
  Have you guess 'd you yourself would not continue?
  The wanderer would not heed me
@@ -85,6 +130,59 @@ username</strong> and a link to a paste of your <strong>ssh pub key</strong>
  To feel the presence of a brave commanding officer But she was always right.
  I 'd rather you would.'' This was a river of Troy
 </pre>
+</td>
+<td>
+<pre>
+orators, singers, musicians to come!
+ She will break it to you better than I can.
+ Saturn expelled his father, and seized his throne
+-- I wish our opinions were the same.
+ Ere departing fade from my eyes your forests of bayonets
+ Emma soon recollected, and understood him
+
+--'''' My dear papa, he is three-and-twenty.
+ I hope time has not made you less willing to pardon.
+; Nay-be calm, for I am so: Does it burn?
+ She will break it to you better than I can.
+ play the part that looks back on the actor or actress!
+ She continued to look back, but in vain
+
+ It is necessary and beside the large sort is puff.
+; she is living in dread of the visit.
+ Year of comets and meteors transient and strange
+;'' remember that I am here.-- Mr.
+ She will break it to you better than I can.
+; and Emma was quite in charity with him.
+
+ It is a mere nothing after all
+ The doors of the two rooms were just opposite each other.
+ She will break it to you better than I can.
+ I shall just go round by Mrs. Cole 's
+ Here is realization, Here is a man tallied
+ Even pleasure, you know, is fatiguing
+
+ Keep your raptures for Harriet 's face.
+ Ere departing fade from my eyes your forests of bayonets
+ For to one side she leans, Then back she sways
+ It soon appeared that London was not the place for her.
+ Perhaps they had the figure of a winged horse on the prow
+ She will break it to you better than I can.
+
+ She will break it to you better than I can.
+ To conclude, I announce what comes after me.
+; nothing delineated or distinguished.
+ Excelsior Who has gone farthest?
+ To girlhood, boyhood look, the teacher and the school.
+`` How I could so long a time be fancying myself!
+
+`` Yes, sometimes he can.'' Do you mean with regard to this letter?''
+ Any nonsense will serve. the flesh over and over!
+ Eleves, I salute you!`` I not aware!'
+</pre>
+</td>
+
+</tr>
+</table>
   
     </body>
 </html>
